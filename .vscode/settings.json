@@ -1,0 +1,10 @@
+{
+    "typescript.tsdk": "./node_modules/typescript/lib",
+    "files.exclude": {
+        "**/*.gitignore": true,
+        "**/*.js": true,
+        "**/*.js.map": true,
+        "**/node_modules": true,
+        ".vscode": true
+    }
+}
