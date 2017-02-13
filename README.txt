@@ -1,1 +1,1 @@
-第一个angular2的小程序
+绗竴涓猘ngular2鐨勫皬绋嬪簭
