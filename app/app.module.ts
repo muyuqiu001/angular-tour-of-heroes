@@ -8,7 +8,6 @@ import { HeroDetailComponent } from './hero-detail.component';
 import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes.component'
 import { HeroService } from './hero.service'
-import { DashboardComponent } from './dashboard.component'
 import { AppRoutingModule } from './app-routing.module';
 import { HeroSearchComponent } from './hero-search.component';
 
@@ -30,7 +29,6 @@ import './rxjs-extensions';
     AppComponent,
     HeroDetailComponent,
     HeroesComponent,
-    DashboardComponent,
     HeroSearchComponent
   ],
   providers: [
