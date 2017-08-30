@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
     template: `
         <h1>{{title}}</h1>
         <nav>
-            <a routerLink="/heroes">Heroes</a>
+            <a routerLink="/heroes">查看已经报名的人员</a>
         </nav>
         <router-outlet></router-outlet>
     `,
@@ -14,5 +14,5 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-    title = 'Tour of Heroes';
+    title = '周末足球报名系统';
 }

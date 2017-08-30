@@ -1,0 +1,42 @@
+<h2>登录报名系统</h2>
+
+
+<!-- <script type="text/javascript">
+        function getValue() {
+            var ss = document.getElementById('attendDate');
+            var mmm = document.getElementById('conformInfo');
+            var displayInfo = document.getElementById('inputHeroName').value;
+            if (ss.value == "0") {
+                displayInfo = displayInfo + " 周六";
+            }
+            if (ss.value == "1") {
+                displayInfo = displayInfo + " 周日";
+            }
+            if (ss.value == "2") {
+                displayInfo = displayInfo + " 周六周日两天均可";
+            }
+            mmm.innerHTML = displayInfo + " 报名成功";
+        }
+    </script> -->
+
+<div>
+    <label>姓名:</label> <input id='inputHeroName' #heroName /><br><br>
+    <label>日期:</label>
+    <select id="attendDate">
+        <option value="0">周六</option>
+        <option value="1">周日</option>
+        <option value="2">均可</option>
+    </select>
+</div>
+<br>
+<div>
+    <button (click)="add(heroName.value); heroName.value=''">
+    Add
+    </button>
+</div>
+<br><br><br>
+<div id="conformInfo"></div>
+
+<div>
+    <button (click)="gotoHeroes()">View Details</button>
+</div>
