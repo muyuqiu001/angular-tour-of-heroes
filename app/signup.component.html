@@ -1,6 +1,8 @@
-<h2>登录报名系统</h2>
-
-
+<div>
+    <nav>
+        <a routerLink="/heroes">查看已经报名的人员</a>
+    </nav>
+</div>
 <!-- <script type="text/javascript">
         function getValue() {
             var ss = document.getElementById('attendDate');
@@ -18,25 +20,31 @@
             mmm.innerHTML = displayInfo + " 报名成功";
         }
     </script> -->
-
+<br>
+<br>
+<br>
 <div>
     <label>姓名:</label> <input id='inputHeroName' #heroName /><br><br>
     <label>日期:</label>
-    <select id="attendDate">
-        <option value="0">周六</option>
-        <option value="1">周日</option>
-        <option value="2">均可</option>
+    <select id="attendDate" #attendday>
+        <option value="周六">周六</option>
+        <option value="周日">周日</option>
+        <option value="周六周日均可">均可</option>
     </select>
 </div>
 <br>
 <div>
-    <button (click)="add(heroName.value); heroName.value=''">
-    Add
+    <button (click)="add(heroName.value, attendday.value); heroName.value=''; attendday.value='周六周日均可'">
+    报名
     </button>
+
+    <!-- <button (click)="delete(heroName.value); heroName.value=''">
+        取消报名
+    </button> -->
 </div>
 <br><br><br>
-<div id="conformInfo"></div>
-
+<!-- <div id="conformInfo"></div> -->
+<!-- 
 <div>
     <button (click)="gotoHeroes()">View Details</button>
-</div>
+</div> -->

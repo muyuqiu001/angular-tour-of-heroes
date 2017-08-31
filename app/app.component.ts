@@ -5,9 +5,9 @@ import { Component } from '@angular/core';
     selector: 'my-app',
     template: `
         <h1>{{title}}</h1>
-        <nav>
+<!--        <nav>
             <a routerLink="/heroes">查看已经报名的人员</a>
-        </nav>
+        </nav>-->
         <router-outlet></router-outlet>
     `,
     styleUrls: ['app.component.css']

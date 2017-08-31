@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 import { Hero } from './hero'
 import { HeroService } from './hero.service';
@@ -16,7 +17,8 @@ export class HeroesComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private heroService: HeroService) { }
+    private heroService: HeroService,
+    private location: Location) { }
 
 
   ngOnInit(): void {
@@ -36,10 +38,12 @@ export class HeroesComponent implements OnInit {
     this.router.navigate(['/detail', this.selectedHero.id]);
   }
 
-  add(name: string): void {
+  add(name: string, attendday: string): void {
     name = name.trim();
     if (!name) { return; }
-    this.heroService.create(name)
+    attendday = attendday.trim();
+    if (!attendday) { return; }
+    this.heroService.create(name, attendday)
       .then(hero => {
         this.heroes.push(hero);
         this.selectedHero = null;
@@ -53,5 +57,9 @@ export class HeroesComponent implements OnInit {
         this.heroes = this.heroes.filter(h => h !== hero);
         if (this.selectedHero === hero) { this.selectedHero = null; }
       });
+  }
+
+  goBack(): void {
+    this.location.back();
   }
 }

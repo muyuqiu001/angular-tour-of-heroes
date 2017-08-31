@@ -1,0 +1,9 @@
+nav a {
+    padding: 5px 10px;
+    text-decoration: none;
+    margin-top: 50px;
+    display: inline-block;
+    background-color: #00efef;
+    border-radius: 4px;
+    font-size: large;
+}

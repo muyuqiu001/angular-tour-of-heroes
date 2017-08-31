@@ -32,18 +32,22 @@ export class SignupComponent implements OnInit {
     }
 
     //报名
-    add(name: string): void {
+    add(name: string, attendday: string): void {
         name = name.trim();
         if (!name) { return; }
-        this.heroService.create(name)
+        this.heroService.create(name, attendday)
             .then(hero => {
                 this.heroes.push(hero);
-            });
+            }).then(() => this.gotoHeroes());
     }
 
     //取消报名
 
-    delete(name: string): void {
-
-    }
+    delete(hero: Hero): void {
+        this.heroService
+          .delete(hero.id)
+          .then(() => {
+            this.heroes = this.heroes.filter(h => h !== hero);
+          });
+      }
 }
